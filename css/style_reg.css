@@ -1,0 +1,142 @@
+*{
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+body{
+    background-image: url(../img/bg2.jpg);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.warp{
+    height: 100vh;
+    display: flex;
+   align-items: center;
+   flex-direction: column; 
+   min-height: 300px;
+   justify-content: center;
+}  
+
+.formulario{
+    border-top: 4px solid  #ff8000;
+    box-shadow: 0 0 5px grey;
+    width: 300px;
+    display: flex;
+    background-color: rgba(210, 210, 210, 0.63);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+input[type=text]:focus,
+input[type="email"]:focus,
+form input[type="password"]:focus {
+    outline: 2px solid #ff8000;
+}
+
+textarea:focus{
+    outline: 2px solid #ff8000;
+}
+
+
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:flex;
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:15px;
+	border: none;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#ff8000;
+    transition: all 300ms;
+    margin-bottom: 30px;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+    background-color: #ff963e;
+    transform: scale(1.02);
+    
+}
+
+
+/* -------- TEXTO ------- */
+h1{
+    color: #ff8000;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-shadow: 0 0 3px grey;
+}
+
+/* CONTENIDO */
+.contenido{
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.637);
+    color: rgb(51, 0, 0);
+    border: 2px solid #ff8000;
+    border-radius: 5px;
+}
+
+article{
+    padding: 10px;
+}
+
+/* ICONOS STYLE */
+.icon-cog {
+    color: #ff8000;
+    margin-right: 7px;
+  }
+
+  /* TEXTO LOGIN */
+  .texto{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .texto a{
+    color: #ff8000;
+    font-weight: 400;
+  }
