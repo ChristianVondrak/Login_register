@@ -31,6 +31,13 @@
             </div>
                 <!-- <input type="text" class="form-control" name="usuario" placeholder="Usuario" value=""> -->
                 <input type="submit" value="Login" name="submit" class="btn">
+                <?php if (!empty($errores)) : ?>
+                <div class="error">
+                    <ul>
+                        <?php echo $errores; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
             </form>
         </div>
 

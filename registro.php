@@ -28,7 +28,25 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
            if ($resultado != false) {
             $errores .= '<li>Username already exist</li>';
            }
+
+           $password = hash('sha512',$password);
+           $cpassword = hash('sha512',$cpassword);
+
+           if ($password != $cpassword) {
+            $errores.= "<li>Passwords arent's the same</li>";  
+           }
     }
+
+    if ($errores=='') {
+        $statement = $conexion->prepare('INSERT INTO usuarios (ID,user,pass) VALUES (null,:usuario,:pass)');
+        $statement->execute(array(
+            ':usuario'=>$usuario,
+            ':pass'=>$password));
+
+            header('Location: login.php');
+    }
+
+
 }
 
 
